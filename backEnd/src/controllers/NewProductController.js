@@ -6,16 +6,11 @@ class  NewProductController {
     const  {    
         DESC        ,
         UNID_MEDIDA      ,
-        DESC_GONDOLA     ,
-        DESC_PDV         ,
         CODIGO_BARRAS    ,
         ID_FORNECEDOR    ,
-        ID_GRUPO         ,
-        ID_SUBGRUPO      ,
         ID_DPTO          ,
         ID_SECAO         ,
-        ATIVO,
-        UND_ATACADO
+        ATIVO
     } = request.body;   
     
 
@@ -23,16 +18,11 @@ class  NewProductController {
         ID: uuid()    ,
         DESC        ,
         UNID_MEDIDA      ,
-        DESC_GONDOLA     ,
-        DESC_PDV         ,
         CODIGO_BARRAS    ,
         ID_FORNECEDOR    ,
-        ID_GRUPO         ,
-        ID_SUBGRUPO      ,
         ID_DPTO          ,
         ID_SECAO         ,
-        ATIVO,
-        UND_ATACADO};
+        ATIVO};
 
     products.push(variabeis);
     return response.status(201).send();
