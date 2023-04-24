@@ -3,8 +3,7 @@ const products =[];
 class  NewProductController {
 
     newProduct(request, response){
-    const  { 
-    
+    const  {    
         DESC        ,
         UNID_MEDIDA      ,
         DESC_GONDOLA     ,
@@ -34,6 +33,7 @@ class  NewProductController {
         ID_SECAO         ,
         ATIVO,
         UND_ATACADO};
+
     products.push(variabeis);
     return response.status(201).send();
     };

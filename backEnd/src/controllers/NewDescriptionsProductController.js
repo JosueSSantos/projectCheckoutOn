@@ -3,21 +3,14 @@ const depart = [];
 const section =[];
 
 class NewDescriptionsProdutsController {
+
     newDepartment(require,response){
-        const bodyDepartament = {id: '', desc: '', ativo: '', setor: ''};
-        depart.push(bodyDepartament);
         const {id, desc, setor } = require.body;
         
         
         const validateSection =    section.find(element => element  = setor );
-        const validateDepart = depart.find(element => element = id);   
 
-        console.log(validateDepart);
-
-        if(validateDepart.id === depart.find(element => element = id)){
-            return response.json({error: "ID ou nome de Departamento Já criado,tente novamente !!"});
-        };
-        console.log(validateSection);
+        console.log(id);
         if(!id || !desc, !setor ){
             return response.json({error: `Erro ao criar Departamento sem info de ${id, desc, setor}`});
         
@@ -46,7 +39,8 @@ class NewDescriptionsProdutsController {
 
         section.push(bodySection);
 
-        return response.status(201).send();
+        return response.json({bodySection});
+        
     };
 
     viewSection(require, response){
