@@ -40,5 +40,16 @@ app.get('/viewProduct',(request, response) =>{
     newProductController.viewProduct(request, response);
 });
 
+//FILIAL
+
+app.post('/newFilial', (request,respose) =>  {
+    newDescriptionsProduct.newFilial(request, respose);
+});
+
+app.get('/viewFilial', (request,respose) =>  {
+    newDescriptionsProduct.viewFilial(request, respose);
+});
+
+
 app.listen(port, ()=> {console.log("Servidor iniciado http://localhost:3030/")})
 

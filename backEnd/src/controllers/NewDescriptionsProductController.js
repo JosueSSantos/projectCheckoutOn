@@ -1,6 +1,7 @@
 const uuid = require('uuid.v4');
 const depart = [];
 const section =[];
+const fil =   [];
 
 class NewDescriptionsProdutsController {
 
@@ -45,6 +46,18 @@ class NewDescriptionsProdutsController {
 
     viewSection(require, response){
         return response.json({section});
+    };
+
+    newFilial(request, response){
+        const  {id, desc, cnpj, idUf, idCity } = request.body;
+        let variabeis = {id, desc, cnpj, idUf, idCity};
+        fil.push(variabeis);
+
+        return response.status(201).send();
+    };
+
+    viewFilial(request, response){
+        return response.json({fil});
     }
 
 };

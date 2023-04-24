@@ -1,6 +1,10 @@
 const uuid  = require('uuid.v4');
+const NewDescriptionsProduct  = require('./NewDescriptionsProductController');
+
 const products =[];
+
 class  NewProductController {
+
 
     newProduct(request, response){
     const  {    
@@ -9,11 +13,12 @@ class  NewProductController {
         CODIGO_BARRAS    ,
         ID_FORNECEDOR    ,
         ID_DPTO          ,
-        ID_SECAO         ,
-        ATIVO
-    } = request.body;   
-    
+        ID_SECAO        ,
+        URL
 
+    } = request.body;   
+
+    console.log(dateDepart);
     const  variabeis = {   
         ID: uuid()    ,
         DESC        ,
@@ -22,7 +27,10 @@ class  NewProductController {
         ID_FORNECEDOR    ,
         ID_DPTO          ,
         ID_SECAO         ,
-        ATIVO};
+        URL, 
+        ATIVO: 1
+    };
+
 
     products.push(variabeis);
     return response.status(201).send();
