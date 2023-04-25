@@ -13,9 +13,7 @@ class  NewProductController {
         CODIGO_BARRAS    ,
         ID_FORNECEDOR    ,
         ID_DPTO          ,
-        ID_SECAO        ,
-        URL
-
+        ID_SECAO        
     } = request.body;   
 
     console.log(dateDepart);
@@ -27,7 +25,7 @@ class  NewProductController {
         ID_FORNECEDOR    ,
         ID_DPTO          ,
         ID_SECAO         ,
-        URL, 
+        URL : '', 
         ATIVO: 1
     };
 
